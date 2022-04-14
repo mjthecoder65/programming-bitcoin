@@ -51,12 +51,11 @@ class FieldElement:
             n += self.prime - 1
         number = pow(self.number, n, self.prime)
         return self.__class__(number, self.prime)
-    
-# if __name__ == "__main__":
-#     a = FieldElement(7, 13)
-#     b = FieldElement(7, 13)
 
-#     if a == b:
-#         print("They are equal")
-#     else:
-#         print("They are not equal")
+    def __div__(self, other):
+        # Fermat Little Theorem required
+        pass
+
+    def __truediv__(self, other):
+        pass
+    
